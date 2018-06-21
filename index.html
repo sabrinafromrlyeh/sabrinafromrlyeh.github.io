@@ -42,7 +42,7 @@
 </head>
 <body>
 
-<p>you will never escape my dungeon:</p>
+<p>you will never escape my dungeon</p>
 <div class="container" onclick="myFunction(this)">
   <div class="bar1"></div>
   <div class="bar2"></div>
@@ -52,6 +52,73 @@
 <script>
 function myFunction(x) {
     x.classList.toggle("change");
+}
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+    background-color: #b33535;
+    color: #1f1f1f;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #780101; 
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: red;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+
+<button class="accordion">dirt</button>
+<div class="panel">
+  <p>eat the dirt and become enlightened. dine upon thy flesh as the sixth eye opens revealing the new world. walk on the seesaw to hell.</p>
+</div>
+
+<button class="accordion">Memento Mori</button>
+<div class="panel">
+  <p>did you eat the dirt? did you eat your flesh? how did they taste? were they delicious? did you become enlightened?</p>
+</div>
+
+<button class="accordion">the gate</button>
+<div class="panel">
+  <p>eat eat eat eat eat eat eat eat eat eat eat eat eat eat eat eat eat eateaateateateaetaerateaeateaeaeateyaetayetaeaetaetaetateayetayetayetayetayetya.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
 }
 </script>
 
